@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Information - CUMA</title>
+    <link rel="stylesheet" href="../styles/general.css">
+    <script src="../backend/namespace.js" defer></script>
+    <script src="../backend/unitConnection.js" defer></script>
+    <script src="../backend/unit.js" defer></script>
+    <script src="../backend/authentication.js" defer></script>
+    <script src="../component/sidenav.js" defer></script>
+    <script src="../component/header/header.js"></script>
+    <script src="../script/sidenav-logout.js"></script>
+    <script src="../nav-unit-info.js" defer></script>
+</head>
+<body>
+    <header-component></header-component>
+
+    <sidenav-component isopen="true"></sidenav-component>
+    
+    <main id="main">
+        <section id = "searchUnitSection" class="add-unit-form" style="display: inline;">
+            <div class="bubble">
+                <h2>Search for Unit Information</h2>
+                <form id="search-unit-form">
+                    <div class="input-container">
+                        <select id="search-institution" required>
+                            <option value="" disabled selected>Select Institution</option>
+                            <option value="Monash">Monash</option>
+                        </select>
+                        <label for="search-institution">Institution</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="search-unit" required>
+                        <label for="search-unit">Search for Existing Unit</label>
+                    </div>
+                    <div>
+                        <button type="button" class="primary-btn" id = 'searchButton'>Search</button>
+                        <span id = 'errorText'style="font-size:small; color:red; display: none;">Unit or Institution could not be found.</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="displayUnitSection" class="add-unit-form" style="display: inline;">
+            <h2>Selected Unit Information</h2>
+
+            <p id="display-unit-description">Search for a unit to see the details</p>
+        </section class="add-unit-form" style="display: inline;">
+    </main>
+    
+
+</body>
+</html>

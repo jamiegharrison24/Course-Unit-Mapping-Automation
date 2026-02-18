@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUMA - Dashboard</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/header.css">
+</head>
+<body>
+<header>
+    <img src="images/1200px-Hamburger_icon.svg.webp" class="burger-bar-icon">
+    <h1>CUMA</h1>
+</header>
+
+<nav class="sidebar">
+    <div class="sidebar-link">
+        <img src="images/icons8-navigation-96.png" class="sidebar-img">
+        <a href="http://127.0.0.1:5500/cuma/front-end/index.html">
+            <button>Mapping</button>
+        </a>
+    </div>
+    <div class="sidebar-link">
+        <img src="images/icons8-navigation-96.png" class="sidebar-img">
+        <a href="http://127.0.0.1:5500/cuma/front-end/index.html">
+            <button>Add Unit</button>
+        </a>
+    </div>
+    <div class="sidebar-link">
+        <img src="images/bl_1645_Search_seo_magnifier_earth_globe_internet-512.webp" class="sidebar-img">
+        <a href="http://127.0.0.1:5500/cuma/front-end/index.html">
+            <button>Unit Info</button>
+        </a>
+    </div>
+    <div class="sidebar-link">
+        <img src="images/icons8-person-96.png" class="sidebar-img">
+        Profile
+    </div>
+    <div class="sidebar-link">
+        <img src="images/icons8-cog-96.png" class="sidebar-img">
+        Settings
+    </div>
+</nav>
+
+<main>
+
+    <div class="dashboard-flex">
+        <p class="courses-paragraph">Courses</p>
+        <div class="dashboard-grid">
+            <div class="dashboard-element">
+                <p>Bachelor of Software Eng</p>
+            </div>
+            <div class="dashboard-element">
+                <p>Bachelor of Science</p>
+            </div>
+            <div class="dashboard-element">
+                <p>Bachelor of Agriculture</p>
+            </div>
+            <div class="dashboard-element">
+                <p>Add new course</p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+</body>
+</html>

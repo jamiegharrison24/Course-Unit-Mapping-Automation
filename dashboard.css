@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUMA</title>
+    <link rel="stylesheet" href="styles/general.css">
+
+    <script src="../backend/namespace.js" defer></script>
+    <script src="../backend/unitConnection.js" defer></script>
+    <script src="../backend/unit.js" defer></script>
+    <script src="../backend/authentication.js" defer></script>
+    <script src="../backend/webscraperWrapper.js" defer></script>
+    <script src="./scripts/init.js"></script>
+    <script src="./component/sidenav.js" defer></script>
+    <script src="./component/header/header.js" defer></script>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <script src="./index.js" defer></script>
+    <script src="dark-light-mode.js"></script>
+    <script src="./script/sidenav-logout.js"></script>
+    <script src="./script/send-connections.js"></script>
+    <script src="../backend/unitConnection.js" defer></script>
+    <script src="./nav-add-unit.js" defer></script>
+
+    <link rel="stylesheet" href="./styles/waitingScreen.css">
+</head>
+<body>
+    <header-component></header-component>
+
+    
+    <sidenav-component isopen="true"></sidenav-component>
+    
+    <main id="main">
+        <section class="add-unit-section">
+            <div class="bubble">
+                <h2>Add Unit to Database</h2>
+                <form id="add-unit-form">
+                    <div class="input-container">
+                        <select id="institution" required>
+                            <option value="" disabled selected>Select Institution</option>
+                            <option value="Institution 1">Institution 1</option>
+                            <option value="Institution 2">Institution 2</option>
+                        </select>
+                        <label for="institution">Institution</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="unit-code" required>
+                        <label for="unit-code">Unit Code</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="unit-title" required>
+                        <label for="unit-title">Unit Title</label>
+                    </div>
+                    <div class="input-container">
+                        <select id="unit-type" required>
+                            <option value="" disabled selected>Select Unit Type</option>
+                            <option value="Core">Core</option>
+                            <option value="Elective">Elective</option>
+                        </select>
+                        <label for="unit-type">Unit Type</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" id="credit-points" required>
+                        <label for="credit-points">Credit Points</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" id="unit-level" required>
+                        <label for="unit-level">Unit Level</label>
+                    </div>
+                    <button type="submit" class="primary-btn">Add Unit</button>
+                </form>
+            </div>
+            <div id="success-message" class="bubble" style="display:none;">
+                <h2>Unit Successfully Added to Database</h2>
+                <p><strong>Institution:</strong> <span id="summary-institution"></span></p>
+                <p><strong>Unit Code:</strong> <span id="summary-unit-code"></span></p>
+                <p><strong>Unit Title:</strong> <span id="summary-unit-title"></span></p>
+                <p><strong>Unit Type:</strong> <span id="summary-unit-type"></span></p>
+                <p><strong>Credit Points:</strong> <span id="summary-credit-points"></span></p>
+                <p><strong>Unit Level:</strong> <span id="summary-unit-level"></span></p>
+            </div>
+        </section>
+
+        <section class="add-unit-section">
+            <h2>Scan URL</h2>
+            <form id="scan-url-form">
+                <label for="url">Input URL</label>
+                <input type="text" id="url">
+            </form>
+            <button type="submit" class="primary-btn" id="scan-url-button">Scan URL</button>
+        </section>
+
+
+
+    </main>
+
+
+    
+ 
+</body>
+</html>
+
+
