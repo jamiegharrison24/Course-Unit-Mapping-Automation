@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bachelor of Software Engineering - Monash University</title>
+    <link rel="stylesheet" href="styles/transfer-planner.css">
+    <script src="../backend/namespace.js" defer></script>
+    <script src="../backend/authentication.js" defer></script>
+    <script src="../backend/unit.js" defer></script>
+    <script src="../backend/transferPlan.js" defer></script>
+    <script src="../component/sidenav.js"></script>
+    <script src="../component/header/header.js"></script>
+    <script src="../script/init.js"></script>
+    <script src="../script/transfer-planner-db-access.js" defer></script>
+    <script src="../script/sidenav-logout.js"></script>
+    <script src="../transfer-planner-home.js" defer></script>
+</head>
+
+<body>
+    <header-component></header-component>
+
+    <sidenav-component isopen="true"></sidenav-component>
+    
+    <!-- Main Page -->
+    <main id="main">
+        <!-- Transfer Plan Home  -->
+        <div class="container" id="transfer-planner-home">
+            <div class="container-content" id="transfer-planner-home-content">
+
+                <!-- Gettings headings -->
+                <div class="heading">
+                    <h1 id="greeting"></h1>
+                    <p id="date"></p>
+                </div>
+
+                <!-- Saved Planner Grid -->
+                <div class="saved-planner-grid">
+                    <!-- Planner List Items -->
+                    <div id="planner-list" class="planner-list hidden">
+                        <!-- Planner items will be dynamically added here -->
+                    </div>
+
+                    <!-- Empty Message -->
+                    <div id="empty-message" class="empty-message-container hidden">
+                        <img src="./images/empty-folder-illustration.png" alt="No Planners - image by Freepik" class="empty-image">
+                        <h3>You have no transfer plan</h3>
+                        <p>Use the 'Create New Planner' button to get started</p>
+                    </div>
+                </div>
+
+                <!-- Create New button -->
+                <button id="create-planner" class="create-button">+ Create New Planner</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Create New Plan Container -->
+    <div class="modal hidden" id="create-new-plan">
+        <div class="modal-content">
+            <!-- Header with Search Bar -->
+            <div class="modal-header">
+                <div class="title">
+                    <h1>Create a new Transfer Plan</h1>
+                    <button class="close-button" id="close-create-new-plan-modal"><img src="images/close.png" class="close-button-icon"></button>
+                </div>
+            </div>
+
+            <!-- New Plan Form -->
+            <form class="transfer-plan-form">
+                <!-- Titles -->
+                <p>To start your plan select your course details.</p>
+
+                <!-- Course Level input -->
+                <div class="form-group">
+                    <label for="course-level">Course Level *</label>
+                    <select id="course-level" required>
+                    <option value="">Select</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Postgraduate">Postgraduate</option>
+                    </select>
+                </div>
+
+                <!-- Course Name Input -->
+                <div class="form-group">
+                    <label for="course">Select Course *</label>
+                    <select id="course" required>
+                    <option value="">Select</option>
+                    <option value="Bachelor of Engineering - Software">Bachelor of Engineering - Software</option>
+                    <option value="Bachelor of Engineering - Civil">Bachelor of Engineering - Civil</option>
+                    <!-- Add more courses as needed -->
+                    </select>
+                </div> 
+
+                <!-- Study Year Input -->
+                <div class="form-group">
+                    <label for="study-year">Study Year *</label>
+                    <select id="study-year" required>
+                    <option value="">Select</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    </select>
+                </div>
+
+                <!-- Study Period Input -->
+                <div class="form-group">
+                    <label for="study-period">Study Period *</label>
+                    <select id="study-period" required>
+                    <option value="">Select</option>
+                    <option value="Semester 1">Semester 1</option>
+                    <option value="Semester 2">Semester 2</option>
+                    </select>
+                </div>
+
+                <!-- Transfer University -->
+                <div class="form-group">
+                    <label for="transfer-university">Transfer University *</label>
+                    <select id="transfer-university" required>
+                    <option value="">Select</option>
+                    </select>
+                </div>
+
+                <!-- Plan Name Input -->
+                <div class="form-group">
+                    <label for="plan-name">Name your plan *</label>
+                    <input type="text" id="plan-name" placeholder="New Transfer Plan 2025" required>
+                </div>
+
+                <!-- Submission Button -->
+                <button type="submit" class="submit-button">Create Transfer Plan</button>
+            </form>
+        </div>
+    </div>
+    
+
+</body>
+</html>

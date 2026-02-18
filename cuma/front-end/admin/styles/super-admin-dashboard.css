@@ -1,0 +1,312 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e90ff; /* Dodger blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+#user-list-container {
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #1e90ff;
+}
+
+#user-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#user-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-list li:hover {
+    background-color: #f0f8ff;
+}
+
+#user-list .user-info {
+    flex: 1;
+}
+
+#user-list .user-status {
+    margin-left: 10px;
+    color: #888;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; /* 5% from the top */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+#user-details {
+    margin-top: 20px;
+}
+
+#action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#action-buttons button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+}
+
+#approve-btn {
+    background-color: #28a745; /* Green */
+}
+
+#reject-btn {
+    background-color: #dc3545; /* Red */
+}
+
+#delete-btn {
+    background-color: #6c757d; /* Gray */
+}
+
+#approve-btn:hover {
+    background-color: #218838;
+}
+
+#reject-btn:hover {
+    background-color: #c82333;
+}
+
+#delete-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Header Styles */
+header {
+    background-color: #1e90ff; /* Dodger blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#logout-btn i {
+    margin-right: 5px;
+}
+
+#logout-btn:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #1e90ff;
+}
+
+#navigation {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation li {
+    flex: 1;
+    text-align: center;
+    padding: 14px 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+#navigation li.active {
+    background-color: #187bcd;
+    border-bottom: 3px solid #fff;
+}
+
+#navigation li:hover {
+    background-color: #187bcd;
+}
+
+/* Search Container Styles */
+#search-container {
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+}
+
+#search-input {
+    width: 91%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+/* User List Container */
+#user-list-container {
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: white;
+    padding: 0;
+    border-radius: 5px;
+}
+
+/* User List Styles */
+#user-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#user-list li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-list li:hover {
+    background-color: #f0f8ff;
+}
+
+#user-list .user-info {
+    flex: 1;
+}
+
+#user-list .user-status {
+    margin-left: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Modal Styles */
+/* Role Selection Styles */
+#role-selection {
+    margin-top: 20px;
+}
+
+#role-selection label {
+    font-weight: bold;
+}
+
+#role-select {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Action Buttons Styles */
+#action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#action-buttons button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+}
+
+#approve-btn {
+    background-color: #28a745; /* Green */
+}
+
+#reject-btn {
+    background-color: #ffc107; /* Yellow */
+    color: black;
+}
+
+#delete-btn {
+    background-color: #dc3545; /* Red */
+}
+
+#approve-btn:hover {
+    background-color: #218838;
+}
+
+#reject-btn:hover {
+    background-color: #e0a800;
+}
+
+#delete-btn:hover {
+    background-color: #c82333;
+}

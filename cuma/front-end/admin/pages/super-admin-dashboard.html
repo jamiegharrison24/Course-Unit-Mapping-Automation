@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CUMA - Super Admin Dashboard</title>
+  <link rel="stylesheet" href="/admin/styles/super-admin-dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="/backend/namespace.js" defer></script>
+  <script src="/backend/cumaAdmin.js" defer></script>
+  <script src="/backend/authentication.js" defer></script>
+  <script src="/admin/js/super-admin-dashboard.js" defer></script>
+
+</head>
+<body>
+<header>
+  <h1>CUMA - Super Admin Dashboard</h1>
+  <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+</header>
+<nav>
+  <ul id="navigation">
+    <li data-tab="pending" class="active">Pending Users</li>
+    <li data-tab="approved">All Users</li>
+  </ul>
+</nav>
+<main>
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search users...">
+    <i class="fas fa-search search-icon"></i>
+  </div>
+  <div id="user-list-container">
+    <ul id="user-list">
+      <!-- List of users will be dynamically populated here -->
+    </ul>
+  </div>
+</main>
+
+<!-- Modal for user details -->
+<div id="user-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <h2>User Details</h2>
+    <div id="user-details">
+      <!-- User details will be displayed here when a user is clicked -->
+    </div>
+    <div id="role-selection">
+      <label for="role-select">Modify Role:</label>
+      <select id="role-select">
+        <option value="student">Student</option>
+        <option value="course_director">Course Director</option>
+        <option value="general_user">General User</option>
+      </select>
+    </div>
+    <div id="action-buttons">
+      <button id="approve-btn"><i class="fas fa-check"></i> Approve</button>
+      <button id="reject-btn"><i class="fas fa-times"></i> Reject</button>
+      <button id="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

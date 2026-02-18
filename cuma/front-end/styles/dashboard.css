@@ -1,0 +1,31 @@
+.dashboard-flex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 40px;
+}
+
+.dashboard-grid{
+    display: grid;
+    width: 100%;
+    height: 120px;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 100px;
+    column-gap: 100px;
+    flex: 1;
+}
+
+.dashboard-element {
+    background-color: rgba(154,179,251,255);
+    border-radius: 25px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.courses-paragraph {
+    font-size: 40px;
+    margin: auto;
+}

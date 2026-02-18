@@ -1,0 +1,6 @@
+{
+    "watch": ["cuma/api", "cuma/backend", "cuma/admin"],
+    "ext": "js,json",
+    "ignore": ["cuma/api/node_modules/*"],
+    "delay": "2500"
+  }
